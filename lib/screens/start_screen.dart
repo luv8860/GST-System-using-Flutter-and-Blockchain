@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:page_transition/page_transition.dart';
+
+import 'login_page.dart';
 
 class Start extends StatelessWidget {
   @override
@@ -51,6 +54,13 @@ class Start extends StatelessWidget {
               minWidth: MediaQuery.of(context).size.width * 0.7,
               height: 60,
               onPressed: () {
+                 Navigator.push(
+                  context,
+                  PageTransition(
+                      type: PageTransitionType.leftToRight,
+                      child: LoginPage(),
+                      ctx: context),
+                );
               },
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(50)),
