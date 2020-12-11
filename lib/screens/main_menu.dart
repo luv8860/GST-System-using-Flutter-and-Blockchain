@@ -180,10 +180,10 @@ class _MainMenuState extends State<MainMenu> {
                         padding: EdgeInsets.all(10),
                         decoration: BoxDecoration(
                             border: Border(
-                                bottom: BorderSide(color: Colors.orange[500]),
-                                top: BorderSide(color: Colors.orange[500]),
-                                left: BorderSide(color: Colors.orange[500]),
-                                right: BorderSide(color: Colors.orange[500]))),
+                                bottom: BorderSide(color: Colors.blue[500]),
+                                top: BorderSide(color: Colors.blue[500]),
+                                left: BorderSide(color: Colors.blue[500]),
+                                right: BorderSide(color: Colors.blue[500]))),
                         child: TextFormField(
                           decoration: InputDecoration(
                               prefixIcon: Icon(Icons.format_indent_increase),
@@ -205,7 +205,7 @@ class _MainMenuState extends State<MainMenu> {
                     SizedBox(height: 50),
                     Center(
                       child: MaterialButton(
-                        color: Colors.orange[500],
+                        color: Colors.blue[500],
                         minWidth: MediaQuery.of(context).size.width * 0.7,
                         child: Text("Find the Bill",
                             style: TextStyle(
@@ -264,16 +264,16 @@ class _MainMenuState extends State<MainMenu> {
                                                       border: Border(
                                                           bottom: BorderSide(
                                                               color: Colors
-                                                                  .orange[500]),
+                                                                  .blue[500]),
                                                           top: BorderSide(
                                                               color: Colors
-                                                                  .orange[500]),
+                                                                  .blue[500]),
                                                           left: BorderSide(
                                                               color: Colors
-                                                                  .orange[500]),
+                                                                  .blue[500]),
                                                           right: BorderSide(
                                                               color:
-                                                                  Colors.orange[
+                                                                  Colors.blue[
                                                                       500]))),
                                                   child: TextField(
                                                     readOnly: true,
@@ -298,16 +298,16 @@ class _MainMenuState extends State<MainMenu> {
                                                       border: Border(
                                                           bottom: BorderSide(
                                                               color: Colors
-                                                                  .orange[500]),
+                                                                  .blue[500]),
                                                           top: BorderSide(
                                                               color: Colors
-                                                                  .orange[500]),
+                                                                  .blue[500]),
                                                           left: BorderSide(
                                                               color: Colors
-                                                                  .orange[500]),
+                                                                  .blue[500]),
                                                           right: BorderSide(
                                                               color:
-                                                                  Colors.orange[
+                                                                  Colors.blue[
                                                                       500]))),
                                                   child: TextField(
                                                     decoration: InputDecoration(
@@ -331,16 +331,16 @@ class _MainMenuState extends State<MainMenu> {
                                                       border: Border(
                                                           bottom: BorderSide(
                                                               color: Colors
-                                                                  .orange[500]),
+                                                                  .blue[500]),
                                                           top: BorderSide(
                                                               color: Colors
-                                                                  .orange[500]),
+                                                                  .blue[500]),
                                                           left: BorderSide(
                                                               color: Colors
-                                                                  .orange[500]),
+                                                                  .blue[500]),
                                                           right: BorderSide(
                                                               color:
-                                                                  Colors.orange[
+                                                                  Colors.blue[
                                                                       500]))),
                                                   child: TextField(
                                                     decoration: InputDecoration(
@@ -365,16 +365,16 @@ class _MainMenuState extends State<MainMenu> {
                                                       border: Border(
                                                           bottom: BorderSide(
                                                               color: Colors
-                                                                  .orange[500]),
+                                                                  .blue[500]),
                                                           top: BorderSide(
                                                               color: Colors
-                                                                  .orange[500]),
+                                                                  .blue[500]),
                                                           left: BorderSide(
                                                               color: Colors
-                                                                  .orange[500]),
+                                                                  .blue[500]),
                                                           right: BorderSide(
                                                               color:
-                                                                  Colors.orange[
+                                                                  Colors.blue[
                                                                       500]))),
                                                   child: TextField(
                                                     decoration: InputDecoration(
@@ -399,16 +399,16 @@ class _MainMenuState extends State<MainMenu> {
                                                       border: Border(
                                                           bottom: BorderSide(
                                                               color: Colors
-                                                                  .orange[500]),
+                                                                  .blue[500]),
                                                           top: BorderSide(
                                                               color: Colors
-                                                                  .orange[500]),
+                                                                  .blue[500]),
                                                           left: BorderSide(
                                                               color: Colors
-                                                                  .orange[500]),
+                                                                  .blue[500]),
                                                           right: BorderSide(
                                                               color:
-                                                                  Colors.orange[
+                                                                  Colors.blue[
                                                                       500]))),
                                                   child: TextField(
                                                     decoration: InputDecoration(
@@ -482,10 +482,10 @@ class _MainMenuState extends State<MainMenu> {
                         padding: EdgeInsets.all(10),
                         decoration: BoxDecoration(
                             border: Border(
-                                bottom: BorderSide(color: Colors.orange[500]),
-                                top: BorderSide(color: Colors.orange[500]),
-                                left: BorderSide(color: Colors.orange[500]),
-                                right: BorderSide(color: Colors.orange[500]))),
+                                bottom: BorderSide(color: Colors.blue[500]),
+                                top: BorderSide(color: Colors.blue[500]),
+                                left: BorderSide(color: Colors.blue[500]),
+                                right: BorderSide(color: Colors.blue[500]))),
                         child: TextFormField(
                           decoration: InputDecoration(
                               prefixIcon: Icon(Icons.format_indent_increase),
@@ -510,10 +510,10 @@ class _MainMenuState extends State<MainMenu> {
                         padding: EdgeInsets.all(10),
                         decoration: BoxDecoration(
                             border: Border(
-                                bottom: BorderSide(color: Colors.orange[500]),
-                                top: BorderSide(color: Colors.orange[500]),
-                                left: BorderSide(color: Colors.orange[500]),
-                                right: BorderSide(color: Colors.orange[500]))),
+                                bottom: BorderSide(color: Colors.blue[500]),
+                                top: BorderSide(color: Colors.blue[500]),
+                                left: BorderSide(color: Colors.blue[500]),
+                                right: BorderSide(color: Colors.blue[500]))),
                         child: TextFormField(
                           decoration: InputDecoration(
                               prefixIcon: Icon(Icons.perm_identity),
@@ -538,10 +538,10 @@ class _MainMenuState extends State<MainMenu> {
                         padding: EdgeInsets.all(10),
                         decoration: BoxDecoration(
                             border: Border(
-                                bottom: BorderSide(color: Colors.orange[500]),
-                                top: BorderSide(color: Colors.orange[500]),
-                                left: BorderSide(color: Colors.orange[500]),
-                                right: BorderSide(color: Colors.orange[500]))),
+                                bottom: BorderSide(color: Colors.blue[500]),
+                                top: BorderSide(color: Colors.blue[500]),
+                                left: BorderSide(color: Colors.blue[500]),
+                                right: BorderSide(color: Colors.blue[500]))),
                         child: TextFormField(
                           decoration: InputDecoration(
                               prefixIcon: Icon(Icons.phone),
@@ -566,10 +566,10 @@ class _MainMenuState extends State<MainMenu> {
                         padding: EdgeInsets.all(10),
                         decoration: BoxDecoration(
                             border: Border(
-                                bottom: BorderSide(color: Colors.orange[500]),
-                                top: BorderSide(color: Colors.orange[500]),
-                                left: BorderSide(color: Colors.orange[500]),
-                                right: BorderSide(color: Colors.orange[500]))),
+                                bottom: BorderSide(color: Colors.blue[500]),
+                                top: BorderSide(color: Colors.blue[500]),
+                                left: BorderSide(color: Colors.blue[500]),
+                                right: BorderSide(color: Colors.blue[500]))),
                         child: TextFormField(
                           decoration: InputDecoration(
                               prefixIcon: Icon(Icons.account_balance_wallet),
@@ -594,10 +594,10 @@ class _MainMenuState extends State<MainMenu> {
                         padding: EdgeInsets.all(10),
                         decoration: BoxDecoration(
                             border: Border(
-                                bottom: BorderSide(color: Colors.orange[500]),
-                                top: BorderSide(color: Colors.orange[500]),
-                                left: BorderSide(color: Colors.orange[500]),
-                                right: BorderSide(color: Colors.orange[500]))),
+                                bottom: BorderSide(color: Colors.blue[500]),
+                                top: BorderSide(color: Colors.blue[500]),
+                                left: BorderSide(color: Colors.blue[500]),
+                                right: BorderSide(color: Colors.blue[500]))),
                         child: TextFormField(
                           decoration: InputDecoration(
                               prefixIcon: Icon(Icons.account_balance_wallet),
@@ -619,7 +619,7 @@ class _MainMenuState extends State<MainMenu> {
                     SizedBox(height: 50),
                     Center(
                       child: MaterialButton(
-                        color: Colors.orange[500],
+                        color: Colors.blue[500],
                         minWidth: MediaQuery.of(context).size.width * 0.7,
                         child: Text("Generate the Bill",
                             style: TextStyle(
@@ -697,9 +697,9 @@ class Card extends StatelessWidget {
               //     begin: Alignment.topLeft,
               //     end: Alignment.bottomRight,
               //     colors: [
-              //       Colors.orange[700],
-              //       Colors.orange[500],
-              //       Colors.orange[700],
+              //       Colors.blue[700],
+              //       Colors.blue[500],
+              //       Colors.blue[700],
               //     ]),
             ),
             child: Column(
@@ -730,7 +730,7 @@ Widget titleText(String text) {
       child: Text(
         text,
         style: TextStyle(
-          color: Colors.orange[200],
+          color: Colors.blue[200],
           fontFamily: 'Alfa Slab One',
           fontSize: 16,
         ),

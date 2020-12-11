@@ -41,7 +41,7 @@ class _DashboardState extends State<Dashboard> {
     return Scaffold(
       backgroundColor: Colors.blue,
       body: name == "waiting"
-          ? Center(child: CircularProgressIndicator())
+          ? Center(child: CircularProgressIndicator(backgroundColor: Colors.white,))
           : SafeArea(
               child: Stack(
                 children: [
