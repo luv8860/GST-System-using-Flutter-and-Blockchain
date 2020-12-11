@@ -42,7 +42,7 @@ samples, guidance on mobile development, and a full API reference. -->
 - [ ]  Business can also view all its bills 
 
 
-## [Link to Presentation](https://drive.google.com/file/d/1eHoS2PPXu5Cj8xANhMiMoDJ1qVJ2thEP/view?usp=sharing)
+## [Link to Presentation](https://drive.google.com/file/d/1pNYX4b3dvrzvH-n4z-YidrzLbwVAtRiE/view?usp=sharing)
 ## [Link to Youtube Video]()
 
 <p align="center">
