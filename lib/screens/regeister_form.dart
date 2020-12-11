@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:gst_sys/services/blockchain.dart';
+import 'package:page_transition/page_transition.dart';
+
+import 'login_page.dart';
 
 
 class RegisterPage extends StatefulWidget {
@@ -266,7 +270,17 @@ class _RegisterPageState extends State<RegisterPage> {
                         minWidth: MediaQuery.of(context).size.width * 0.7,
                         height: 60,
                         onPressed: () async {
-                         print("will check for authentication");
+                         var result = await Blockchain().addBusiness(name, pwd,
+                              gst, adhano, bkno, phno, int.parse(balno));
+                          if (result != null) {
+                            Navigator.push(
+                              context,
+                              PageTransition(
+                                  type: PageTransitionType.rightToLeft,
+                                  child: LoginPage(),
+                                  ctx: context),
+                            );
+                          }
                         },
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(50)),

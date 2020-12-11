@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:gst_sys/animations/wave.dart';
+import 'package:gst_sys/services/blockchain.dart';
+import 'package:gst_sys/screens/main_menu.dart';
+import 'package:page_transition/page_transition.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 
 class LoginPage extends StatefulWidget {
@@ -130,12 +133,31 @@ class _LoginPageState extends State<LoginPage> {
                                 fontSize: 16.0);
                           }
                           else if (gst == "admin") {
-                                  print("Will check for admin");
-                            
+                            String a = await Blockchain().govtLogin(gst, pwd);
+                            if (a == "Login Sucessful") {
+                              print("here we will show government page");
+                            }
                           }
-                          else{
-                            print("Will check for business");
-                         
+                          else
+                          {String a = await Blockchain().login(gst, pwd);
+                          if (a == "Login Sucessful") {
+                            Navigator.push(
+                              context,
+                              PageTransition(
+                                  type: PageTransitionType.rightToLeft,
+                                  child: MainMenu(uid: gst),
+                                  ctx: context),
+                            );
+                          } else {
+                            Fluttertoast.showToast(
+                                msg: "INVALID LOGIN",
+                                toastLength: Toast.LENGTH_SHORT,
+                                gravity: ToastGravity.BOTTOM,
+                                timeInSecForIosWeb: 1,
+                                backgroundColor: Colors.redAccent,
+                                textColor: Colors.white,
+                                fontSize: 16.0);
+                          }
                         }},
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(50)),
@@ -155,7 +177,7 @@ class _LoginPageState extends State<LoginPage> {
                       ),
                       Align(alignment: Alignment.bottomCenter,
                                               child: Text(
-                          "Made With ❤ by Codeviz",
+                          "Made With ❤ by codewiz",
                           textAlign: TextAlign.center,
                         ),
                       ),
