@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:gst_sys/screens/dashboard.dart';
 import 'package:gst_sys/services/blockchain.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class Constants {
   static const String Subscribe = 'Profile';
@@ -21,11 +22,13 @@ class MainMenu extends StatefulWidget {
 class _MainMenuState extends State<MainMenu> {
   final String uid;
   _MainMenuState(this.uid);
-  void choiceAction(String choice) {
+  void choiceAction(String choice) async{
     if (choice == Constants.Subscribe) {
       Navigator.of(context)
           .push(MaterialPageRoute(builder: (context) => Dashboard(uid: uid)));
     } else if (choice == Constants.SignOut) {
+      SharedPreferences _obj = await SharedPreferences.getInstance();
+      _obj.remove('uid');
       Navigator.of(context).popUntil((route) => route.isFirst);
       // Navigator.of(context)
       //     .push(MaterialPageRoute(builder: (context) => Start()));

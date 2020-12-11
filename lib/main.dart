@@ -1,9 +1,11 @@
 import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:gst_sys/screens/main_menu.dart';
 import 'package:gst_sys/screens/regeister_form.dart';
 import 'package:gst_sys/screens/start_screen.dart';
 import 'package:page_transition/page_transition.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 import 'screens/login_page.dart';
 
@@ -13,8 +15,30 @@ void main() {
   runApp(MyApp());
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
   // This widget is the root of your application.
+  @override
+  _MyAppState createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  String uid;
+  bool checkValue=false;
+  void checkkey() async{
+      SharedPreferences prefs = await SharedPreferences.getInstance();
+      checkValue = prefs.containsKey('uid');
+      if(checkValue==true)
+      {
+          uid=prefs.getString('uid');
+          
+      }
+      
+  }
+  @override
+  void initState() {
+    super.initState();
+    checkkey();
+  }
   @override
   Widget build(BuildContext context) {
     SystemChrome.setPreferredOrientations([
@@ -34,7 +58,7 @@ class MyApp extends StatelessWidget {
             ),
           ),
         ),
-        nextScreen: Start(),
+        nextScreen:checkValue==true?MainMenu(uid: uid):Start(),
         splashTransition: SplashTransition.fadeTransition,
         pageTransitionType: PageTransitionType.fade,
       ),
@@ -42,7 +66,7 @@ class MyApp extends StatelessWidget {
         switch (settings.name) {
           case '/zero':
             return PageTransition(
-              child: Start(),
+              child: checkValue==true?MainMenu(uid: uid):Start(),
               type: PageTransitionType.fade,
               settings: settings,
             );

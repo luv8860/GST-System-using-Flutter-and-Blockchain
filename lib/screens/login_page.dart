@@ -4,6 +4,7 @@ import 'package:gst_sys/services/blockchain.dart';
 import 'package:gst_sys/screens/main_menu.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class LoginPage extends StatefulWidget {
   @override
@@ -14,6 +15,7 @@ class _LoginPageState extends State<LoginPage> {
   final _formKey = GlobalKey<FormState>();
   String gst;
   String pwd;
+
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
@@ -141,6 +143,8 @@ class _LoginPageState extends State<LoginPage> {
                           else
                           {String a = await Blockchain().login(gst, pwd);
                           if (a == "Login Sucessful") {
+                            SharedPreferences _obj = await SharedPreferences.getInstance();
+                            _obj.setString('uid',gst);
                             Navigator.push(
                               context,
                               PageTransition(
