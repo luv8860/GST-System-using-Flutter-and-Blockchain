@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gst_sys/screens/regeister_form.dart';
 import 'package:page_transition/page_transition.dart';
 
 import 'login_page.dart';
@@ -79,7 +80,15 @@ class Start extends StatelessWidget {
               color: Colors.brown[300],
               minWidth: MediaQuery.of(context).size.width * 0.7,
               height: 60,
-              onPressed: () { },
+              onPressed: () {
+                 Navigator.push(
+                  context,
+                  PageTransition(
+                      type: PageTransitionType.leftToRight,
+                      child: RegisterPage(),
+                      ctx: context),
+                );
+               },
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(50)),
               child: Text(
