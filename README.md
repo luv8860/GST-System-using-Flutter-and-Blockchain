@@ -19,6 +19,15 @@ The goal of this flutter app is to reduce tax evasion using a decentralised and 
 [online documentation](https://flutter.dev/docs), which offers tutorials,
 samples, guidance on mobile development, and a full API reference. -->
 
+## Screens
+<p>
+<img src="images/A.jpeg" height="300em" />
+<img src="images/B.jpeg" height="300em" />
+<img src="images/C.jpeg" height="300em" />
+<img src="images/D.jpeg" height="300em" />
+<img src="images/E.jpeg" height="300em" />
+</p>
+
 ## Problem Statement
 - According to tribuneindia.com, there have been 20,233 cases of GST evasion worth Rs 93,642.08 crores since July 2017.
 - The main reason is many fraud bills are generated .
