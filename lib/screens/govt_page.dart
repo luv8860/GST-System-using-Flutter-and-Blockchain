@@ -201,10 +201,10 @@ class _GovtPageState extends State<GovtPage> {
                         padding: EdgeInsets.all(10),
                         decoration: BoxDecoration(
                             border: Border(
-                                bottom: BorderSide(color: Colors.orange[500]),
-                                top: BorderSide(color: Colors.orange[500]),
-                                left: BorderSide(color: Colors.orange[500]),
-                                right: BorderSide(color: Colors.orange[500]))),
+                                bottom: BorderSide(color: Colors.blue[500]),
+                                top: BorderSide(color: Colors.blue[500]),
+                                left: BorderSide(color: Colors.blue[500]),
+                                right: BorderSide(color: Colors.blue[500]))),
                         child: TextFormField(
                           decoration: InputDecoration(
                               prefixIcon: Icon(Icons.format_indent_increase),
@@ -230,10 +230,10 @@ class _GovtPageState extends State<GovtPage> {
                         padding: EdgeInsets.all(10),
                         decoration: BoxDecoration(
                             border: Border(
-                                bottom: BorderSide(color: Colors.orange[500]),
-                                top: BorderSide(color: Colors.orange[500]),
-                                left: BorderSide(color: Colors.orange[500]),
-                                right: BorderSide(color: Colors.orange[500]))),
+                                bottom: BorderSide(color: Colors.blue[500]),
+                                top: BorderSide(color: Colors.blue[500]),
+                                left: BorderSide(color: Colors.blue[500]),
+                                right: BorderSide(color: Colors.blue[500]))),
                         child: TextFormField(
                           decoration: InputDecoration(
                               prefixIcon: Icon(Icons.format_indent_increase),
@@ -255,7 +255,7 @@ class _GovtPageState extends State<GovtPage> {
                     SizedBox(height: 50),
                     Center(
                       child: MaterialButton(
-                        color: Colors.orange[500],
+                        color: Colors.blue[500],
                         minWidth: MediaQuery.of(context).size.width * 0.7,
                         child: Text("Find the Bill",
                             style: TextStyle(
@@ -314,16 +314,16 @@ class _GovtPageState extends State<GovtPage> {
                                                       border: Border(
                                                           bottom: BorderSide(
                                                               color: Colors
-                                                                  .orange[500]),
+                                                                  .blue[500]),
                                                           top: BorderSide(
                                                               color: Colors
-                                                                  .orange[500]),
+                                                                  .blue[500]),
                                                           left: BorderSide(
                                                               color: Colors
-                                                                  .orange[500]),
+                                                                  .blue[500]),
                                                           right: BorderSide(
                                                               color:
-                                                                  Colors.orange[
+                                                                  Colors.blue[
                                                                       500]))),
                                                   child: TextField(
                                                     readOnly: true,
@@ -348,16 +348,16 @@ class _GovtPageState extends State<GovtPage> {
                                                       border: Border(
                                                           bottom: BorderSide(
                                                               color: Colors
-                                                                  .orange[500]),
+                                                                  .blue[500]),
                                                           top: BorderSide(
                                                               color: Colors
-                                                                  .orange[500]),
+                                                                  .blue[500]),
                                                           left: BorderSide(
                                                               color: Colors
-                                                                  .orange[500]),
+                                                                  .blue[500]),
                                                           right: BorderSide(
                                                               color:
-                                                                  Colors.orange[
+                                                                  Colors.blue[
                                                                       500]))),
                                                   child: TextField(
                                                     decoration: InputDecoration(
@@ -381,16 +381,16 @@ class _GovtPageState extends State<GovtPage> {
                                                       border: Border(
                                                           bottom: BorderSide(
                                                               color: Colors
-                                                                  .orange[500]),
+                                                                  .blue[500]),
                                                           top: BorderSide(
                                                               color: Colors
-                                                                  .orange[500]),
+                                                                  .blue[500]),
                                                           left: BorderSide(
                                                               color: Colors
-                                                                  .orange[500]),
+                                                                  .blue[500]),
                                                           right: BorderSide(
                                                               color:
-                                                                  Colors.orange[
+                                                                  Colors.blue[
                                                                       500]))),
                                                   child: TextField(
                                                     decoration: InputDecoration(
@@ -415,16 +415,16 @@ class _GovtPageState extends State<GovtPage> {
                                                       border: Border(
                                                           bottom: BorderSide(
                                                               color: Colors
-                                                                  .orange[500]),
+                                                                  .blue[500]),
                                                           top: BorderSide(
                                                               color: Colors
-                                                                  .orange[500]),
+                                                                  .blue[500]),
                                                           left: BorderSide(
                                                               color: Colors
-                                                                  .orange[500]),
+                                                                  .blue[500]),
                                                           right: BorderSide(
                                                               color:
-                                                                  Colors.orange[
+                                                                  Colors.blue[
                                                                       500]))),
                                                   child: TextField(
                                                     decoration: InputDecoration(
@@ -449,16 +449,16 @@ class _GovtPageState extends State<GovtPage> {
                                                       border: Border(
                                                           bottom: BorderSide(
                                                               color: Colors
-                                                                  .orange[500]),
+                                                                  .blue[500]),
                                                           top: BorderSide(
                                                               color: Colors
-                                                                  .orange[500]),
+                                                                  .blue[500]),
                                                           left: BorderSide(
                                                               color: Colors
-                                                                  .orange[500]),
+                                                                  .blue[500]),
                                                           right: BorderSide(
                                                               color:
-                                                                  Colors.orange[
+                                                                  Colors.blue[
                                                                       500]))),
                                                   child: TextField(
                                                     decoration: InputDecoration(
@@ -533,10 +533,10 @@ class _GovtPageState extends State<GovtPage> {
                         padding: EdgeInsets.all(10),
                         decoration: BoxDecoration(
                             border: Border(
-                                bottom: BorderSide(color: Colors.orange[500]),
-                                top: BorderSide(color: Colors.orange[500]),
-                                left: BorderSide(color: Colors.orange[500]),
-                                right: BorderSide(color: Colors.orange[500]))),
+                                bottom: BorderSide(color: Colors.blue[500]),
+                                top: BorderSide(color: Colors.blue[500]),
+                                left: BorderSide(color: Colors.blue[500]),
+                                right: BorderSide(color: Colors.blue[500]))),
                         child: TextFormField(
                           decoration: InputDecoration(
                               prefixIcon: Icon(Icons.pages),
@@ -558,7 +558,7 @@ class _GovtPageState extends State<GovtPage> {
                     SizedBox(height: 50),
                     Center(
                       child: MaterialButton(
-                        color: Colors.orange[500],
+                        color: Colors.blue[500],
                         minWidth: MediaQuery.of(context).size.width * 0.7,
                         child: Text("Find the Business",
                             style: TextStyle(
@@ -617,16 +617,16 @@ class _GovtPageState extends State<GovtPage> {
                                                       border: Border(
                                                           bottom: BorderSide(
                                                               color: Colors
-                                                                  .orange[500]),
+                                                                  .blue[500]),
                                                           top: BorderSide(
                                                               color: Colors
-                                                                  .orange[500]),
+                                                                  .blue[500]),
                                                           left: BorderSide(
                                                               color: Colors
-                                                                  .orange[500]),
+                                                                  .blue[500]),
                                                           right: BorderSide(
                                                               color:
-                                                                  Colors.orange[
+                                                                  Colors.blue[
                                                                       500]))),
                                                   child: TextField(
                                                     decoration: InputDecoration(
@@ -650,16 +650,16 @@ class _GovtPageState extends State<GovtPage> {
                                                       border: Border(
                                                           bottom: BorderSide(
                                                               color: Colors
-                                                                  .orange[500]),
+                                                                  .blue[500]),
                                                           top: BorderSide(
                                                               color: Colors
-                                                                  .orange[500]),
+                                                                  .blue[500]),
                                                           left: BorderSide(
                                                               color: Colors
-                                                                  .orange[500]),
+                                                                  .blue[500]),
                                                           right: BorderSide(
                                                               color:
-                                                                  Colors.orange[
+                                                                  Colors.blue[
                                                                       500]))),
                                                   child: TextField(
                                                     decoration: InputDecoration(
@@ -683,16 +683,16 @@ class _GovtPageState extends State<GovtPage> {
                                                       border: Border(
                                                           bottom: BorderSide(
                                                               color: Colors
-                                                                  .orange[500]),
+                                                                  .blue[500]),
                                                           top: BorderSide(
                                                               color: Colors
-                                                                  .orange[500]),
+                                                                  .blue[500]),
                                                           left: BorderSide(
                                                               color: Colors
-                                                                  .orange[500]),
+                                                                  .blue[500]),
                                                           right: BorderSide(
                                                               color:
-                                                                  Colors.orange[
+                                                                  Colors.blue[
                                                                       500]))),
                                                   child: TextField(
                                                     decoration: InputDecoration(
@@ -716,16 +716,16 @@ class _GovtPageState extends State<GovtPage> {
                                                       border: Border(
                                                           bottom: BorderSide(
                                                               color: Colors
-                                                                  .orange[500]),
+                                                                  .blue[500]),
                                                           top: BorderSide(
                                                               color: Colors
-                                                                  .orange[500]),
+                                                                  .blue[500]),
                                                           left: BorderSide(
                                                               color: Colors
-                                                                  .orange[500]),
+                                                                  .blue[500]),
                                                           right: BorderSide(
                                                               color:
-                                                                  Colors.orange[
+                                                                  Colors.blue[
                                                                       500]))),
                                                   child: TextField(
                                                     decoration: InputDecoration(
@@ -749,16 +749,16 @@ class _GovtPageState extends State<GovtPage> {
                                                       border: Border(
                                                           bottom: BorderSide(
                                                               color: Colors
-                                                                  .orange[500]),
+                                                                  .blue[500]),
                                                           top: BorderSide(
                                                               color: Colors
-                                                                  .orange[500]),
+                                                                  .blue[500]),
                                                           left: BorderSide(
                                                               color: Colors
-                                                                  .orange[500]),
+                                                                  .blue[500]),
                                                           right: BorderSide(
                                                               color:
-                                                                  Colors.orange[
+                                                                  Colors.blue[
                                                                       500]))),
                                                   child: TextField(
                                                     decoration: InputDecoration(
@@ -783,16 +783,16 @@ class _GovtPageState extends State<GovtPage> {
                                                       border: Border(
                                                           bottom: BorderSide(
                                                               color: Colors
-                                                                  .orange[500]),
+                                                                  .blue[500]),
                                                           top: BorderSide(
                                                               color: Colors
-                                                                  .orange[500]),
+                                                                  .blue[500]),
                                                           left: BorderSide(
                                                               color: Colors
-                                                                  .orange[500]),
+                                                                  .blue[500]),
                                                           right: BorderSide(
                                                               color:
-                                                                  Colors.orange[
+                                                                  Colors.blue[
                                                                       500]))),
                                                   child: TextField(
                                                     decoration: InputDecoration(
@@ -817,16 +817,16 @@ class _GovtPageState extends State<GovtPage> {
                                                       border: Border(
                                                           bottom: BorderSide(
                                                               color: Colors
-                                                                  .orange[500]),
+                                                                  .blue[500]),
                                                           top: BorderSide(
                                                               color: Colors
-                                                                  .orange[500]),
+                                                                  .blue[500]),
                                                           left: BorderSide(
                                                               color: Colors
-                                                                  .orange[500]),
+                                                                  .blue[500]),
                                                           right: BorderSide(
                                                               color:
-                                                                  Colors.orange[
+                                                                  Colors.blue[
                                                                       500]))),
                                                   child: TextField(
                                                     decoration: InputDecoration(
@@ -895,10 +895,10 @@ class _GovtPageState extends State<GovtPage> {
                       padding: EdgeInsets.all(10),
                       decoration: BoxDecoration(
                           border: Border(
-                              bottom: BorderSide(color: Colors.orange[500]),
-                              top: BorderSide(color: Colors.orange[500]),
-                              left: BorderSide(color: Colors.orange[500]),
-                              right: BorderSide(color: Colors.orange[500]))),
+                              bottom: BorderSide(color: Colors.blue[500]),
+                              top: BorderSide(color: Colors.blue[500]),
+                              left: BorderSide(color: Colors.blue[500]),
+                              right: BorderSide(color: Colors.blue[500]))),
                       child: TextField(
                         decoration: InputDecoration(
                             prefixIcon: Icon(Icons.format_list_numbered),
@@ -915,10 +915,10 @@ class _GovtPageState extends State<GovtPage> {
                       padding: EdgeInsets.all(10),
                       decoration: BoxDecoration(
                           border: Border(
-                              bottom: BorderSide(color: Colors.orange[500]),
-                              top: BorderSide(color: Colors.orange[500]),
-                              left: BorderSide(color: Colors.orange[500]),
-                              right: BorderSide(color: Colors.orange[500]))),
+                              bottom: BorderSide(color: Colors.blue[500]),
+                              top: BorderSide(color: Colors.blue[500]),
+                              left: BorderSide(color: Colors.blue[500]),
+                              right: BorderSide(color: Colors.blue[500]))),
                       child: TextField(
                         decoration: InputDecoration(
                             prefixIcon: Icon(Icons.account_balance_wallet),
@@ -1010,7 +1010,7 @@ Widget titleText(String text) {
       child: Text(
         text,
         style: TextStyle(
-          color: Colors.orange[200],
+          color: Colors.blue[200],
           fontFamily: 'Alfa Slab One',
           fontSize: 16,
         ),

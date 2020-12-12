@@ -1,6 +1,7 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:gst_sys/screens/dashboard.dart';
+import 'package:gst_sys/screens/start_screen.dart';
 import 'package:gst_sys/services/blockchain.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -30,9 +31,9 @@ class _MainMenuState extends State<MainMenu> {
     } else if (choice == Constants.SignOut) {
       SharedPreferences _obj = await SharedPreferences.getInstance();
       _obj.remove('uid');
-      Navigator.of(context).popUntil((route) => route.isFirst);
-      // Navigator.of(context)
-      //     .push(MaterialPageRoute(builder: (context) => Start()));
+      // Navigator.of(context).popUntil((route) => route.isFirst);
+      Navigator.of(context)
+          .push(MaterialPageRoute(builder: (context) => Start()));
     }
   }
 
