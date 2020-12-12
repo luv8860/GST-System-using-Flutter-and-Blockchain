@@ -6,6 +6,8 @@ import 'package:page_transition/page_transition.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+import 'govt_page.dart';
+
 class LoginPage extends StatefulWidget {
   @override
   _LoginPageState createState() => _LoginPageState();
@@ -137,7 +139,14 @@ class _LoginPageState extends State<LoginPage> {
                           else if (gst == "admin") {
                             String a = await Blockchain().govtLogin(gst, pwd);
                             if (a == "Login Sucessful") {
-                              print("here we will show government page");
+                               Navigator.push(
+                                context,
+                                PageTransition(
+                                    type: PageTransitionType.rightToLeft,
+                                    child: GovtPage(uid:gst),
+                                    ctx: context),
+                              );
+                              return;
                             }
                           }
                           else

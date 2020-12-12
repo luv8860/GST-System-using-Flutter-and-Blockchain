@@ -4,6 +4,7 @@ import 'package:gst_sys/screens/dashboard.dart';
 import 'package:gst_sys/services/blockchain.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 
 class Constants {
   static const String Subscribe = 'Profile';
@@ -51,7 +52,9 @@ class _MainMenuState extends State<MainMenu> {
 
   @override
   Widget build(BuildContext context) {
+    
     return Scaffold(
+      resizeToAvoidBottomInset: false,
         backgroundColor: Color(0xEEEFFFFF),
         body: name == null
             ? Center(child: CircularProgressIndicator())
@@ -89,44 +92,48 @@ class _MainMenuState extends State<MainMenu> {
                               ))),
                   ]),
                   SizedBox(height: 33.0),
-                  Expanded(
-                    child: Container(
-                        width: MediaQuery.of(context).size.width,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.all(Radius.circular(40)),
-                          color: Colors.transparent,
-                        ),
-                        child: ListView(
-                            physics: BouncingScrollPhysics(),
-                            children: [
-                              SizedBox(height:200),
-                              Padding(
-                                padding: const EdgeInsets.only(bottom: 15.0),
-                                child: FlatButton(
-                                  child: Card(
-                                      imglink: 'assets/bill1.png',
-                                      name: 'Generate New Bill',
-                                      text:
-                                          "Click Here to \nGENERATE new bill"),
-                                  onPressed: () {
-                                    buildShowModalBottomSheet(context);
-                                  },
-                                ),
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.only(bottom: 15.0),
-                                child: FlatButton(
-                                  child: Card(
-                                      imglink: 'assets/bill2.png',
-                                      name: 'Search for Bill',
-                                      text: "Click Here to \nSEARCH for bill"),
-                                  onPressed: () {
-                                    buildShowModalBottomSheet2(context);
-                                  },
-                                ),
-                              ),
-                               
-                            ])),
+                  Flex( direction: Axis.vertical,
+                    children: [
+                      Expanded(
+                        child: Container(
+                            width: MediaQuery.of(context).size.width,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.all(Radius.circular(40)),
+                              color: Colors.transparent,
+                            ),
+                            child: ListView(
+                                physics: BouncingScrollPhysics(),
+                                children: [
+                                  SizedBox(height:200),
+                                  Padding(
+                                    padding: const EdgeInsets.only(bottom: 15.0),
+                                    child: FlatButton(
+                                      child: Card(
+                                          imglink: 'assets/bill1.png',
+                                          name: 'Generate New Bill',
+                                          text:
+                                              "Click Here to \nGENERATE new bill"),
+                                      onPressed: () {
+                                        buildShowModalBottomSheet(context);
+                                      },
+                                    ),
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.only(bottom: 15.0),
+                                    child: FlatButton(
+                                      child: Card(
+                                          imglink: 'assets/bill2.png',
+                                          name: 'Search for Bill',
+                                          text: "Click Here to \nSEARCH for bill"),
+                                      onPressed: () {
+                                        buildShowModalBottomSheet2(context);
+                                      },
+                                    ),
+                                  ),
+                                   
+                                ])),
+                      ),
+                    ],
                   ),
                   Positioned( top:50,right: 3,
                                       child: PopupMenuButton<String>(
@@ -148,6 +155,7 @@ class _MainMenuState extends State<MainMenu> {
 
   Future buildShowModalBottomSheet2(BuildContext context) {
     final _formKey = GlobalKey<FormState>();
+    final size = MediaQuery.of(context).size;
     int billNo;
     return showModalBottomSheet(
       context: context,
@@ -160,6 +168,7 @@ class _MainMenuState extends State<MainMenu> {
         maxChildSize: 1,
         builder: (context, scrollController) {
           return Container(
+            height:size.height-400,
             color: Colors.white,
             child: ListView(controller: scrollController, children: [
               Form(
@@ -466,194 +475,194 @@ class _MainMenuState extends State<MainMenu> {
             color: Colors.white,
             child: ListView(controller: scrollController, children: [
               Form(
-                key: _formKey,
-                child: Column(
-                  children: [
-                    SizedBox(height: 50),
-                    AutoSizeText(
-                      'GENERATE NEW BILL',
-                      maxLines: 1,
-                      style: TextStyle(
-                          fontSize: 40,
-                          fontWeight: FontWeight.w100,
-                          fontFamily: 'Alfa Slab One'),
-                    ),
-                    SizedBox(height: 20),
-                    Padding(
-                      padding: const EdgeInsets.all(10),
-                      child: Container(
-                        padding: EdgeInsets.all(10),
-                        decoration: BoxDecoration(
-                            border: Border(
-                                bottom: BorderSide(color: Colors.blue[500]),
-                                top: BorderSide(color: Colors.blue[500]),
-                                left: BorderSide(color: Colors.blue[500]),
-                                right: BorderSide(color: Colors.blue[500]))),
-                        child: TextFormField(
-                          decoration: InputDecoration(
-                              prefixIcon: Icon(Icons.format_indent_increase),
-                              hintText: "BILL NUMBER",
-                              hintStyle: TextStyle(color: Colors.grey),
-                              border: InputBorder.none),
-                          validator: (value) {
-                            if (value.isEmpty) {
-                              return 'Please enter some text';
+                  key: _formKey,
+                  child: Column(
+                    children: [
+                      SizedBox(height: 50),
+                      AutoSizeText(
+                        'GENERATE NEW BILL',
+                        maxLines: 1,
+                        style: TextStyle(
+                            fontSize: 40,
+                            fontWeight: FontWeight.w100,
+                            fontFamily: 'Alfa Slab One'),
+                      ),
+                      SizedBox(height: 20),
+                      Padding(
+                        padding: const EdgeInsets.all(10),
+                        child: Container(
+                          padding: EdgeInsets.all(10),
+                          decoration: BoxDecoration(
+              border: Border(
+                  bottom: BorderSide(color: Colors.blue[500]),
+                  top: BorderSide(color: Colors.blue[500]),
+                  left: BorderSide(color: Colors.blue[500]),
+                  right: BorderSide(color: Colors.blue[500]))),
+                          child: TextFormField(
+                            decoration: InputDecoration(
+                prefixIcon: Icon(Icons.format_indent_increase),
+                hintText: "BILL NUMBER",
+                hintStyle: TextStyle(color: Colors.grey),
+                border: InputBorder.none),
+                            validator: (value) {
+              if (value.isEmpty) {
+                return 'Please enter some text';
+              }
+              return null;
+                            },
+                            onChanged: (val) {
+              billno = val;
+                            },
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(10),
+                        child: Container(
+                          padding: EdgeInsets.all(10),
+                          decoration: BoxDecoration(
+              border: Border(
+                  bottom: BorderSide(color: Colors.blue[500]),
+                  top: BorderSide(color: Colors.blue[500]),
+                  left: BorderSide(color: Colors.blue[500]),
+                  right: BorderSide(color: Colors.blue[500]))),
+                          child: TextFormField(
+                            decoration: InputDecoration(
+                prefixIcon: Icon(Icons.perm_identity),
+                hintText: "CUSTOMER AADHAR NUMBER",
+                hintStyle: TextStyle(color: Colors.grey),
+                border: InputBorder.none),
+                            validator: (value) {
+              if (value.isEmpty) {
+                return 'Please enter some text';
+              }
+              return null;
+                            },
+                            onChanged: (val) {
+              adhano = val;
+                            },
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(10),
+                        child: Container(
+                          padding: EdgeInsets.all(10),
+                          decoration: BoxDecoration(
+              border: Border(
+                  bottom: BorderSide(color: Colors.blue[500]),
+                  top: BorderSide(color: Colors.blue[500]),
+                  left: BorderSide(color: Colors.blue[500]),
+                  right: BorderSide(color: Colors.blue[500]))),
+                          child: TextFormField(
+                            decoration: InputDecoration(
+                prefixIcon: Icon(Icons.phone),
+                hintText: " CUSTOMER PHONE NUMBER",
+                hintStyle: TextStyle(color: Colors.grey),
+                border: InputBorder.none),
+                            validator: (value) {
+              if (value.isEmpty) {
+                return 'Please enter some text';
+              }
+              return null;
+                            },
+                            onChanged: (val) {
+              cusphono = val;
+                            },
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(10),
+                        child: Container(
+                          padding: EdgeInsets.all(10),
+                          decoration: BoxDecoration(
+              border: Border(
+                  bottom: BorderSide(color: Colors.blue[500]),
+                  top: BorderSide(color: Colors.blue[500]),
+                  left: BorderSide(color: Colors.blue[500]),
+                  right: BorderSide(color: Colors.blue[500]))),
+                          child: TextFormField(
+                            decoration: InputDecoration(
+                prefixIcon: Icon(Icons.account_balance_wallet),
+                hintText: "AMOUNT PAID",
+                hintStyle: TextStyle(color: Colors.grey),
+                border: InputBorder.none),
+                            validator: (value) {
+              if (value.isEmpty) {
+                return 'Please enter some text';
+              }
+              return null;
+                            },
+                            onChanged: (val) {
+              amt = val;
+                            },
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(10),
+                        child: Container(
+                          padding: EdgeInsets.all(10),
+                          decoration: BoxDecoration(
+              border: Border(
+                  bottom: BorderSide(color: Colors.blue[500]),
+                  top: BorderSide(color: Colors.blue[500]),
+                  left: BorderSide(color: Colors.blue[500]),
+                  right: BorderSide(color: Colors.blue[500]))),
+                          child: TextFormField(
+                            decoration: InputDecoration(
+                prefixIcon: Icon(Icons.account_balance_wallet),
+                hintText: "TOTAL GST PAID",
+                hintStyle: TextStyle(color: Colors.grey),
+                border: InputBorder.none),
+                            validator: (value) {
+              if (value.isEmpty) {
+                return 'Please enter some text';
+              }
+              return null;
+                            },
+                            onChanged: (val) {
+              tgst = val;
+                            },
+                          ),
+                        ),
+                      ),
+                      SizedBox(height: 50),
+                      Center(
+                        child: MaterialButton(
+                          color: Colors.blue[500],
+                          minWidth: MediaQuery.of(context).size.width * 0.7,
+                          child: Text("Generate the Bill",
+              style: TextStyle(
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold)),
+                          onPressed: () async {
+                            var string = await Blockchain().genBill(
+                int.parse(billno),
+                adhano,
+                cusphono,
+                int.parse(amt),
+                int.parse(tgst),
+                uid);
+              if (string != null) {
+              print("Bill Generated");
+              Fluttertoast.showToast(
+                  msg: "Bill Generated!!",
+                  toastLength: Toast.LENGTH_SHORT,
+                  gravity: ToastGravity.BOTTOM,
+                  timeInSecForIosWeb: 3,
+                  backgroundColor: Colors.greenAccent,
+                  textColor: Colors.white,
+                  fontSize: 16.0);
                             }
-                            return null;
-                          },
-                          onChanged: (val) {
-                            billno = val;
                           },
                         ),
                       ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.all(10),
-                      child: Container(
-                        padding: EdgeInsets.all(10),
-                        decoration: BoxDecoration(
-                            border: Border(
-                                bottom: BorderSide(color: Colors.blue[500]),
-                                top: BorderSide(color: Colors.blue[500]),
-                                left: BorderSide(color: Colors.blue[500]),
-                                right: BorderSide(color: Colors.blue[500]))),
-                        child: TextFormField(
-                          decoration: InputDecoration(
-                              prefixIcon: Icon(Icons.perm_identity),
-                              hintText: "CUSTOMER AADHAR NUMBER",
-                              hintStyle: TextStyle(color: Colors.grey),
-                              border: InputBorder.none),
-                          validator: (value) {
-                            if (value.isEmpty) {
-                              return 'Please enter some text';
-                            }
-                            return null;
-                          },
-                          onChanged: (val) {
-                            adhano = val;
-                          },
-                        ),
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.all(10),
-                      child: Container(
-                        padding: EdgeInsets.all(10),
-                        decoration: BoxDecoration(
-                            border: Border(
-                                bottom: BorderSide(color: Colors.blue[500]),
-                                top: BorderSide(color: Colors.blue[500]),
-                                left: BorderSide(color: Colors.blue[500]),
-                                right: BorderSide(color: Colors.blue[500]))),
-                        child: TextFormField(
-                          decoration: InputDecoration(
-                              prefixIcon: Icon(Icons.phone),
-                              hintText: " CUSTOMER PHONE NUMBER",
-                              hintStyle: TextStyle(color: Colors.grey),
-                              border: InputBorder.none),
-                          validator: (value) {
-                            if (value.isEmpty) {
-                              return 'Please enter some text';
-                            }
-                            return null;
-                          },
-                          onChanged: (val) {
-                            cusphono = val;
-                          },
-                        ),
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.all(10),
-                      child: Container(
-                        padding: EdgeInsets.all(10),
-                        decoration: BoxDecoration(
-                            border: Border(
-                                bottom: BorderSide(color: Colors.blue[500]),
-                                top: BorderSide(color: Colors.blue[500]),
-                                left: BorderSide(color: Colors.blue[500]),
-                                right: BorderSide(color: Colors.blue[500]))),
-                        child: TextFormField(
-                          decoration: InputDecoration(
-                              prefixIcon: Icon(Icons.account_balance_wallet),
-                              hintText: "AMOUNT PAID",
-                              hintStyle: TextStyle(color: Colors.grey),
-                              border: InputBorder.none),
-                          validator: (value) {
-                            if (value.isEmpty) {
-                              return 'Please enter some text';
-                            }
-                            return null;
-                          },
-                          onChanged: (val) {
-                            amt = val;
-                          },
-                        ),
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.all(10),
-                      child: Container(
-                        padding: EdgeInsets.all(10),
-                        decoration: BoxDecoration(
-                            border: Border(
-                                bottom: BorderSide(color: Colors.blue[500]),
-                                top: BorderSide(color: Colors.blue[500]),
-                                left: BorderSide(color: Colors.blue[500]),
-                                right: BorderSide(color: Colors.blue[500]))),
-                        child: TextFormField(
-                          decoration: InputDecoration(
-                              prefixIcon: Icon(Icons.account_balance_wallet),
-                              hintText: "TOTAL GST PAID",
-                              hintStyle: TextStyle(color: Colors.grey),
-                              border: InputBorder.none),
-                          validator: (value) {
-                            if (value.isEmpty) {
-                              return 'Please enter some text';
-                            }
-                            return null;
-                          },
-                          onChanged: (val) {
-                            tgst = val;
-                          },
-                        ),
-                      ),
-                    ),
-                    SizedBox(height: 50),
-                    Center(
-                      child: MaterialButton(
-                        color: Colors.blue[500],
-                        minWidth: MediaQuery.of(context).size.width * 0.7,
-                        child: Text("Generate the Bill",
-                            style: TextStyle(
-                                color: Colors.white,
-                                fontWeight: FontWeight.bold)),
-                        onPressed: () async {
-                          var string = await Blockchain().genBill(
-                              int.parse(billno),
-                              adhano,
-                              cusphono,
-                              int.parse(amt),
-                              int.parse(tgst),
-                              uid);
-                          if (string != null) {
-                            print("Bill Generated");
-                            Fluttertoast.showToast(
-                                msg: "Bill Generated!!",
-                                toastLength: Toast.LENGTH_SHORT,
-                                gravity: ToastGravity.BOTTOM,
-                                timeInSecForIosWeb: 3,
-                                backgroundColor: Colors.greenAccent,
-                                textColor: Colors.white,
-                                fontSize: 16.0);
-                          }
-                        },
-                      ),
-                    ),
-                    SizedBox(height: 50),
-                  ],
+                      SizedBox(height: 50),
+                    ],
+                  ),
                 ),
-              ),
             ]),
           );
         },
