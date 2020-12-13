@@ -2,9 +2,9 @@
 [![Awesome Flutter](https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white)]()
 [![Awesome Flutter](https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white)]()
 
-> no more tax evasion.
+> No more tax evasion.
 
-The goal of this flutter app is to reduce tax evasion using a decentralised and secure Block Chain System.
+The goal of this app is to reduce tax evasion using a decentralised and secure Block Chain System.
 
 <!-- ## Getting Started -->
 
