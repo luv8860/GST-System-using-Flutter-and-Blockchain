@@ -17,11 +17,12 @@ The goal of this app is to reduce tax evasion using a decentralised and secure B
 
 <!-- For help getting started with Flutter, view our
 [online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference. -->
+samples, guidanceb on mobile development, and a full API reference. -->
 
 ## Screens
 <p>
 <img src="images/A.jpeg" height="300em" />
+<img src="images/F.jpg" height="300em" />	
 <img src="images/B.jpeg" height="300em" />
 <img src="images/C.jpeg" height="300em" />
 <img src="images/D.jpeg" height="300em" />
@@ -40,7 +41,7 @@ samples, guidance on mobile development, and a full API reference. -->
 
 ## Software/Technologies Used
 - Ethereum Block Chain
-- Matic Mumbai Testnet
+- Matic Mumbai Testn
 - Flutter
 - Remix IDE
 
